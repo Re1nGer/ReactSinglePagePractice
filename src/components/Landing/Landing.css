@@ -1,0 +1,120 @@
+.landing {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../../assets/landing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 800px;
+    padding-top: 7rem;
+    width: 100%;
+}
+
+.landing__title {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.landing__title_text {
+    font-weight: 700;
+    font-size: 48px;
+    text-shadow: 2px 2px 8px rgb(0 0 0 / 40%);;
+    color: #fff;
+    flex: .5;
+    text-align: right;
+}
+
+.landing__links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.landing__links ul {
+    display: flex;
+    position: relative;
+}
+
+.landing__link {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 0 1rem;
+    transition: color .2s linear;
+    position: relative;
+}
+
+.landing__link--delimiter::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+}
+
+.landing__link:hover {
+    color: #e6e6e6;
+}
+
+.landing__button {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.landing__button button {
+    outline: 0;
+    background: transparent;
+    border: 3px solid #fff; 
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    color: #fff;
+    transition: background .2s linear;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.landing__button button:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media screen and (max-width: 1170px) {
+    .landing__title {
+        justify-content: center;
+    }
+
+    .landing__title_text {
+        text-align: center;
+        flex: 1;
+        padding: 0 .5rem;
+    }
+
+    .landing__links {
+        justify-content: center;
+    }
+
+    .landing__button {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .landing__links ul {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    .landing__title_text {
+        flex: .8;
+        text-align: right;
+        padding: 0 .5rem;
+    }
+
+    .landing__button {
+        justify-content: flex-end;
+        padding: 0 .5rem;
+    }
+}

@@ -1,0 +1,78 @@
+.testimony {
+    border-radius: 20px;
+    padding-bottom: 5rem;
+}
+
+.testimony__inner_container {
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #34c1f4;
+}
+
+.testimony__icon_container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.testimony__icon {
+    width: 54px;
+    height: 54px;
+}
+
+.testimony__content_text {
+    font-size: 16px;
+    padding: 0 1rem;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.testimony__container {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.testimony__img_container {
+    border-radius: 50%;
+    border: 6px solid #34c1f4; 
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+}
+
+.testimony__img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.testimony__name {
+    font-size: 18px;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1010px) {
+    .testimony {
+        width: 50%;
+    }
+    
+    .testimony__icon_container {
+        justify-content: center;
+    }
+
+    .testimony__container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .testimony {
+        width: 80%;
+    }
+}

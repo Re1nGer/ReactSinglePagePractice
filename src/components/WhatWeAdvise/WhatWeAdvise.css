@@ -1,0 +1,74 @@
+.whatweadvise {
+    background: #fff;
+    margin-bottom: 4rem;
+}
+
+.whatweadvise__container {
+    padding: 10rem 2rem 0 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.whatweadvise__left { 
+    margin-top: 5rem;
+    flex: .4;
+}
+
+.whatweadvise__left_title {
+    color: #34c1f4;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    font-weight: 700;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.whatweadvise__left_content {
+    line-height: 2;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.whatweadvise__right {
+    flex: .5;
+}
+
+.whatweadvise__left_chat {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.whatweadvise__left_chat-text {
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.whatweadvise__left_chat-icon {
+    cursor: pointer;
+}
+
+.whatweadvise__right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.whatweadvise__right_title-text {
+    font-size: 700;
+    line-height: 1.1;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 991px) {
+  .whatweadvise__container {
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }  
+
+  .whatweadvise__container {
+    justify-content: space-around;
+  }
+}

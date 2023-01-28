@@ -1,0 +1,88 @@
+.features {
+    background: #e0e5eb;
+    height: 100%;
+}
+
+.features__title {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.features__title_text {
+    padding: 0 2rem;
+    text-align: center;
+    font-weight: 700;
+    width: 500px;
+    font-size: 42px;
+}
+
+.features__subtitle {
+    padding: 15px 0;
+    color: #111111;
+    display: flex;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+.features__subtitle_text {
+    margin: 0 auto;
+    width: 700px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.features__cards {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    gap: 2rem;
+}
+
+.features__advice_title {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features__advice_title-text {
+    color: #111111;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.features__vertical {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: -10rem;
+}
+
+.feature--down {
+    transform: translateY(4rem);
+}
+
+@media screen and (max-width: 1170px) {
+    .features__vertical {
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .features__cards {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;    
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .feature--down {
+        transform: translateY(0);
+    }
+}

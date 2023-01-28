@@ -1,0 +1,19 @@
+.header {
+    max-width: 1150px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header__hamburger_icon {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+    .header {
+        padding: 0 2rem;
+    }
+}

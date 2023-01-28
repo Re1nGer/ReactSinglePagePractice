@@ -1,0 +1,14 @@
+.company__offers {
+    padding-bottom: 5rem;
+}
+
+
+.company__offers_container {
+    display: flex;
+}
+
+@media screen and (max-width: 610px) {
+    .company__offers_container {
+        flex-direction: column;
+    }
+}

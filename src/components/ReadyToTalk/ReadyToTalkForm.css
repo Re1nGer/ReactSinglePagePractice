@@ -1,0 +1,65 @@
+.readytalk__form {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 690px;
+    max-width: 557px;
+}
+
+.readytalk__form_heading {
+    word-wrap: break-word;
+    font-style: italic;
+    margin-bottom: 2rem; 
+    font-size: 20px;
+}
+
+.readytalk__form_title {
+    line-height: 1.1;
+    font-size: 3rem;
+}
+
+.readytalk__form_fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.readytalk__form_input-name {
+    border: 0;
+    padding: 12px 12px;
+    background: #e0e5eb;
+    font-size: 1.25rem;
+}
+
+.readytalk__form_input-email {
+    border: 0;
+    padding: 12px 12px;
+    background: #e0e5eb;
+    font-size: 1.25rem;
+}
+
+.readytalk__form_contact-btn {
+    background: #34c1f4;
+    border: 1px solid #34c1f4;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+    color: #fff;
+    padding: 15px 30px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.readytalk__form_contact-btn:hover {
+    color: #e6e6e6;
+}
+
+@media screen and (max-width: 991px) {
+    .readytalk__form {
+        width: 347px;
+    }
+}
+

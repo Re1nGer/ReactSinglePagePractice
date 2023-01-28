@@ -1,0 +1,41 @@
+.whatwedo__popup {
+    border-radius: 10px;
+    border-bottom: 7px solid #34c1f4;
+    background: #fff;
+    padding: 0 1.5rem;
+    max-height: 350px;
+    max-width: 400px;
+
+}
+
+.whatwedo__popup_title {
+    font-size: 30px;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.whatwedo__popup_content {
+    color: #111;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.whatwedo__popup_btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.whatwedo__popup_btn {
+    background: #34c1f4;
+    padding: 1rem 2rem;
+    color: #fff;
+    letter-spacing: 2px;
+    outline: 0;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 2rem 0;
+}

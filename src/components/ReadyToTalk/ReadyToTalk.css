@@ -1,0 +1,61 @@
+.readytalk {
+    background: #1738a1;
+    padding: 3rem 0;
+}
+
+.readytalk__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.readytalk__right_img-container {
+    height: 479px;
+    width: 497px;
+    padding-bottom: 1.5rem;
+}
+
+.readytalk__right_img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.readytalk__right {
+    flex: .3;
+}
+
+.readytalk__right_title {
+    font-weight: 700;
+    line-height: 1.1;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 48px;
+}
+
+@media screen and (max-width: 991px) {
+    .readytalk__right_img-container {
+        width: 287px;
+    }
+
+    .readytalk__container {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .readytalk__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .readytalk__right_title {
+        font-size: 25px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .readytalk__right_img-container {
+        margin: 0 auto;
+    }
+}
