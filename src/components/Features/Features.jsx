@@ -2,6 +2,7 @@ import React from 'react';
 import Feature from '../Feature/Feature';
 import FeatureVertical from './FeatureVertical';
 import "./Features.css";
+import { useRef } from 'react';
 
 const dummyFeatures = [
 {
@@ -41,23 +42,59 @@ const dummyFeaturesVerticals = [
 
 function Features() {
 
+    const featureSubtitle = useRef(null);
+    const featureCards = useRef(null);
+    const adviceText = useRef(null);
+
+    React.useEffect(() => {
+
+        const featureElement = featureSubtitle.current;
+        const featureCardElements = featureCards.current;
+        const adviceElement = adviceText.current;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('features__subtitle_text'))
+                        featureElement?.classList.add('slide-in-left');
+
+                    if (entry.target.classList.contains('features__cards'))
+                        featureCardElements?.classList.add('scale-in-center');
+
+                    if (entry.target.classList.contains('features__advice_title-text'))
+                        adviceElement?.classList.add('fade-in');
+                }});
+            },
+            { threshold: 1 });
+
+
+            observer.observe(featureElement);
+            observer.observe(featureCardElements);
+            observer.observe(adviceElement);
+            return () => {
+            observer.disconnect();
+        };
+
+    },[]);
+
     return ( 
         <>
             <div className='features'>
                 <div className='features__title'>
-                    <h1 className=' features__title_text'>Uncover and meet customer needs.</h1>
+                    <h1 className='features__title_text'>Uncover and meet customer needs.</h1>
                 </div>
                 <div className='features__subtitle'>
-                    <p className='slide-in-left features__subtitle_text'>
+                    <p ref={featureSubtitle} className='features__subtitle_text'>
                         Most teams seek to understand customer needs, yet aren't able to hire a dedicated researcher. Now there's another option.
                     </p>
                 </div>
-                <div className='section features__cards'>
+                <div ref={featureCards} className='section features__cards'>
                     {dummyFeatures.map(card => <Feature key={card.id} title={card.title} content={card.content} />)}
                 </div>
                 <div className='features__advice'>
                     <div className='features__advice_title'>
-                        <h1 className='fade-in features__advice_title-text'>
+                        <h1 ref={adviceText} className='features__advice_title-text'>
                             We advise organizations in value creation strategies
                         </h1>
                     </div>

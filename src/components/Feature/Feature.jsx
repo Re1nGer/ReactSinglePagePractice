@@ -4,7 +4,7 @@ import "./Feature.css";
 function Feature({title, content}) {
 
     return (
-        <div className='scale-in-center feature'>
+        <div className='feature'>
             <div className='feature__title'>
                 <h1 className='feature__title_text'>{title}</h1>
             </div>

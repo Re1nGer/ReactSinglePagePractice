@@ -1,9 +1,37 @@
+import React from 'react';
+import { useRef } from 'react';
 import { Sunset } from 'react-feather';
 import './FeatureVertical.css';
 
 function FeatureVertical({title, content, down}) {
+
+    const featureVertical = useRef(null);
+
+    React.useEffect(() => {
+
+        const featureVerticalElement = featureVertical.current;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('feature__vertical'));
+                        featureVerticalElement?.classList.add(down ? 'slide-in-bottom' : 'slide-in-top');
+                }});
+            },
+            { threshold: 1 });
+
+
+            observer.observe(featureVerticalElement);
+            return () => {
+            observer.disconnect();
+        };
+
+        
+    },[])
+
     return ( 
-        <div className={down === true ? 'slide-in-bottom feature__vertical': 'feature__vertical slide-in-top'}>
+        <div ref={featureVertical} className='feature__vertical'>
             <div className='feature__icon'>
                 <div className='feature__icon_inner'>
                     <Sunset color='#fff' size={40} />
