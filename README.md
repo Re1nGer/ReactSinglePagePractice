@@ -2,6 +2,8 @@
 
 Dummy landing page recreated from [here](https://nicepage.com/landing-page/preview/we-create-beautiful-websites-1521860?device=desktop)
 
+Give it a start if you like it 
+
 ## Description
 
 The project would be somewhat useful for its BEM usage in css styles
